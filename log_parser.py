@@ -17,6 +17,7 @@ with open(path, 'r') as f:
 		print(match)
  
 This isn't working. 
+I know I shouldn't leave dead code behind but I need to ask Roberto why the above didn't work.
  '''
 
 
@@ -25,7 +26,7 @@ with open(path, 'r') as f:
 	for line in f:
 		match = re.search("WARNING", line)
 		if match != None:
-			print(line)
+			print(line[0:14] + ' -- ' + line[45:73] + ' -- ' + line[77:] )
 
 
 
